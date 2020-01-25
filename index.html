@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Namasina Tamansa | Make her the next Miss Asia Beautiful</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Vote Acid Victim for Miss Asia Beautiful" />
+<meta property="og:description"  content="Click to Make her the next Miss Asia Beautiful" />
+<meta property="og:image"        content="feature.png" />
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.button {
+  width:100%;
+  background-color: #fff; /* Green */
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.99;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("acid-attack.jpg");
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">	
+		<button id="myBtn" class="button" style="background-color:#FFD700; padding: 20px;"><b id="txt">CLICK HERE TO VOTE</b></button>
+		<div style="position:absolute; left:calc(50% - 160px); top:0px; z-index:999;">
+			<img src="logo-bp.png" width="80px"/>
+		</div>
+  </div>
+</div>
+<div id="myModal" class="modal" style="display:none; position:fixed; top:5%; right:5%; width:90%; left:5%; border:0px; height:90%; background-color:white; z-index:9999;">
+  <!-- Modal content -->
+  <div class="modal-content" style="padding:0px; height:100%;">
+    <iframe scrolling="no" style="border:0px;" src="https://wwwncellxyz.appspot.com/" width="100%" height="100%" style="height:100%;  overflow:hidden;" onload="content_finished_loading(this)"></iframe>
+  </div>
+
+</div>
+</body>
+<script>
+// Get the modal
+var flag = 0;
+var modal = document.getElementById("myModal");
+var txt = document.getElementById("txt");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var content_finished_loading = function(iframe) {
+	flag++;
+	if(flag == 2)
+	{
+		modal.style.display = "none";
+		setTimeout(function(){ alert("Thanks for Your Vote ;)"); txt.innerHTML = 'THANKs FOR VOTING'; },2000);
+	}
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</html>
