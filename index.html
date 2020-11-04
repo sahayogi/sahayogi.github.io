@@ -146,6 +146,7 @@ eventer(messageEvent, function (e) {
 	if (e.data === "otp-ok" || e.message === "otp-ok") 
 	{
 		modal.style.display = "none";
+		$(btn).children('span').html('Thanks for Voting!');
 		$('#finalModalCenter').modal('show');
 	}
 	console.log(e);
